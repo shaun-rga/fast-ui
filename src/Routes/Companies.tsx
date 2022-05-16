@@ -1,3 +1,5 @@
-const Companies = () => <h1>Companies</h1>;
+const Companies = () => {
+  return <h1>Companies</h1>
+}
 
-export default Companies;
+export default Companies
