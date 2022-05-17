@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-const Home = () => {
+const Home: React.FC<any> = () => {
   const [message, setMessage] = useState({ msg: '' })
 
   const makeAPICall = async () => {

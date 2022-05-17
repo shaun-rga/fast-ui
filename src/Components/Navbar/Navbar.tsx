@@ -1,9 +1,10 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 
-const Navbar = () => {
+const Navbar: React.FC<any> = () => {
   return (
     <AppBar position="static">
       <Toolbar>

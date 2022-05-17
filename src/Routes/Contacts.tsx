@@ -1,4 +1,6 @@
-const Contacts = () => {
+import React from 'react'
+
+const Contacts: React.FC<any> = () => {
   return <h1>Contacts</h1>
 }
 
