@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Box } from '@mui/material'
 import Navbar from '../Navbar/Navbar'
 import Home from '../../Routes/Home'
 import Companies from '../../Routes/Companies'
@@ -10,11 +11,13 @@ const App: React.FC<any> = () => {
     <div className="App">
       <BrowserRouter>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/companies" element={<Companies />} />
-          <Route path="/contacts" element={<Contacts />} />
-        </Routes>
+        <Box m={4}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/companies" element={<Companies />} />
+            <Route path="/contacts" element={<Contacts />} />
+          </Routes>
+        </Box>
       </BrowserRouter>
     </div>
   )
