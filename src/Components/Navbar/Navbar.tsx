@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
@@ -9,13 +9,13 @@ const Navbar: React.FC<any> = () => {
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ px: 1 }}>
-          <Link to="/">Home</Link>
+          <NavLink to="/">Home</NavLink>
         </Typography>
         <Typography variant="h6" component="div" sx={{ px: 1 }}>
-          <Link to="/companies">Companies</Link>
+          <NavLink to="/companies">Companies</NavLink>
         </Typography>
         <Typography variant="h6" component="div" sx={{ px: 1 }}>
-          <Link to="/contacts">Contacts </Link>
+          <NavLink to="/contacts">Contacts </NavLink>
         </Typography>
       </Toolbar>
     </AppBar>

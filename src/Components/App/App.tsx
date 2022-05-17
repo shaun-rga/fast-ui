@@ -5,6 +5,7 @@ import Navbar from '../Navbar/Navbar'
 import Home from '../../Routes/Home'
 import Companies from '../../Routes/Companies'
 import Contacts from '../../Routes/Contacts'
+import './App.css'
 
 const App: React.FC<any> = () => {
   return (
