@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 
 const Home: React.FC<any> = () => {
@@ -9,7 +10,8 @@ const Home: React.FC<any> = () => {
       const data = await response.json()
       setMessage(data)
     } catch (e) {
-      console.log(e)
+      // eslint-disable-next-line
+      console.error(e)
     }
   }
 
@@ -19,10 +21,17 @@ const Home: React.FC<any> = () => {
 
   return (
     <>
-      <h1>Home</h1>
-      <p>
+      <Typography
+        variant="h2"
+        align="center"
+        sx={{ fontWeight: 'medium' }}
+        gutterBottom
+      >
+        Home
+      </Typography>
+      <Typography variant="h6" align="center">
         <b>Message from API:</b> {message.msg !== '' ? message.msg : 'ERROR'}
-      </p>
+      </Typography>
     </>
   )
 }

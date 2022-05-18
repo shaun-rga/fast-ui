@@ -1,24 +1,68 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
-import AppBar from '@mui/material/AppBar'
-import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
+import { Link, useLocation } from 'react-router-dom'
+import { Box, Button, Tabs, Tab, Typography } from '@mui/material'
+import {
+  Home,
+  Handshake,
+  CorporateFare,
+  People,
+  Feed,
+} from '@mui/icons-material'
 
 const Navbar: React.FC<any> = () => {
+  const location = useLocation()
+
   return (
-    <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h6" component="div" sx={{ px: 1 }}>
-          <NavLink to="/">Home</NavLink>
+    <Box display="flex" sx={{ borderBottom: 1, borderColor: 'divider', mb: 4 }}>
+      <Button color="primary" sx={{ ml: 2 }}>
+        <Typography variant="h5" sx={{ fontWeight: 'medium' }} component="div">
+          FAST
         </Typography>
-        <Typography variant="h6" component="div" sx={{ px: 1 }}>
-          <NavLink to="/companies">Companies</NavLink>
-        </Typography>
-        <Typography variant="h6" component="div" sx={{ px: 1 }}>
-          <NavLink to="/contacts">Contacts </NavLink>
-        </Typography>
-      </Toolbar>
-    </AppBar>
+      </Button>
+      <Box flexGrow={1} />
+      <Tabs value={location.pathname}>
+        <Tab
+          label="Home"
+          icon={<Home />}
+          iconPosition="start"
+          component={Link}
+          to="/"
+          value="/"
+        />
+        <Tab
+          label="Deals"
+          icon={<Handshake />}
+          iconPosition="start"
+          component={Link}
+          to="/deals"
+          value="/deals"
+        />
+        <Tab
+          label="Companies"
+          icon={<CorporateFare />}
+          iconPosition="start"
+          component={Link}
+          to="/companies"
+          value="/companies"
+        />
+        <Tab
+          label="Contacts"
+          icon={<People />}
+          iconPosition="start"
+          component={Link}
+          to="/contacts"
+          value="/contacts"
+        />
+        <Tab
+          label="Reports"
+          icon={<Feed />}
+          iconPosition="start"
+          component={Link}
+          to="/reports"
+          value="/reports"
+        />
+      </Tabs>
+    </Box>
   )
 }
 

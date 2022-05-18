@@ -1,7 +1,7 @@
 import React from 'react'
 import { Typography } from '@mui/material'
 
-const Companies: React.FC<any> = () => {
+const Reports: React.FC<any> = () => {
   return (
     <Typography
       variant="h3"
@@ -9,9 +9,9 @@ const Companies: React.FC<any> = () => {
       sx={{ fontWeight: 'medium' }}
       gutterBottom
     >
-      Companies
+      Reports
     </Typography>
   )
 }
 
-export default Companies
+export default Reports
